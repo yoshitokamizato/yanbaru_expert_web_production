@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+  width: 200px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: .1em;
+  text-align: center;
+  padding: 18px 0;
+  margin-top: 51px;
+  margin-left: 80px;
+}
+
+a:hover{
+  transition: .3s;
+}
+a:active{
+  position: relative;
+  box-shadow: none;
+}
+
+
+/* 
+============
+  ボタン①
+============ 
+*/
+.btn1{
+  background-color: #D67575;
+  border-radius: 5px;
+}
+.btn1:hover{
+  background-color: #8E78E3;
+}
+
+/* 
+============
+  ボタン②
+============ 
+*/
+.btn2{
+  color: #333;
+  background-color: rgba(222, 224, 94, 1);
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn2:hover{
+  background-color: rgba(222, 224, 94, .5);
+}
+
+.btn2:active{
+  top: 4px;
+}
+
+/* 
+============
+  ボタン③
+============ 
+*/
+.btn3{
+  background-color: #AE62D1;
+  border-radius: 30px;
+  box-shadow: 4px 4px 0px #4B1862;
+}
+
+.btn3:hover{
+  color: #333;
+  border-radius: 0;
+}
+
+.btn3:active{
+  top: 4px;
+}
+
+/* 
+============
+  ボタン④
+============ 
+*/
+.btn4{
+  background-color: #62A9D1;
+  box-shadow: 4px 4px 0px #4B1862;
+  position: relative;
+}
+
+.btn4 img{
+  position: absolute;
+  bottom: -28px;
+  right: 10px;
+}
+
+.btn4:hover{
+  background-color: #78D162;
+  box-shadow: 4px 4px 0px #1F5413;
+}
+
+.btn4:active{
+  top: 4px;
+  box-shadow: none;
+}

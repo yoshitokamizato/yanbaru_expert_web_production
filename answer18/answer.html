@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web制作者のための画像知識|解答例</title>
+  <meta name="description" content="こちらはベーシック編第18章「web制作者のための画像知識」の解答例です">
+  <link rel="stylesheet" href="answer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 
+-*-*-*-*-*-*-*-*-
+      記述編
+-*-*-*-*-*-*-*-*-
+(1) alt属性の役割は？
+代替テキスト
+
+
+(2) figure要素とimg要素の違いは？
+基本的にfigureは注釈がつくが、imgは付かない
+
+
+(3) img要素にmax-width: 100%;を適応させるけれどもこれはなぜ？
+元の画像の大きさ以上にならずに解像度を落とさないため
+
+
+(4)画像を中央寄せする場合、どのようにスタイルを適応させる？
+ブロク要素に変換するか、ブロック要素で囲む。その後marginなどを使用して中央寄せ。
+
+>>例
+img{
+  display: block;
+  margin: 0 auto;
+}
+
+
+(5) iframe要素とvideo要素どう使い分ける？
+iframeはyoutubeなどの動画サイトからの埋め込み
+videoは自前のサーバーからの設置
+
+
+(6) 画像サイズが小さい場合起こり得る問題は？
+入手元が小さいと、画質が荒くなりやすい
+
+
+(7) 画像サイズが大きい場合起こり得える問題は？
+容量が大きく、ページの読み込み速度に影響を与えかねる
+※このとき容量は小さくする場合には圧縮などをして容量は抑えたり、適切な形式で画像を使う
+
+
+-->
+
+<!--   
+  -*-*-*-*-*-*-*-*-
+  コーディング編
+  -*-*-*-*-*-*-*-*-
+-->
+<div>
+  <img src="sample.jpg" alt="沖縄の夏の海の景色">
+  <!-- Alt属性も「どんな写真かわかるように書く」 画像のファイル名もわかるように書く。また圧縮もしておこう！ -->
+  <h4>口コミタイトル(最大全角36文字)24pxBold文字間隔10%左寄せ</h4>
+  <p>口コミテキスト(最大全角120文字程度)14pxmedium文字間隔10%左寄せ。口コミテキスト(最大全角120文字程度)14pxmedium文字間隔10%左寄せ。口コミテキスト(最大全角120文字程度)14pxmedium文字間隔10%左寄せ。口コミテキスト(最大全角120文字程度)14pxmedium文字間隔10%左寄せ。口コミテキスト(最大全角120文字程度)14pxmedium文字間隔10%左寄せ。口コミテキスト(最大全角120文字程度)14pxmedium文字間隔10%左寄せ。</p>
+</div>
+
+<!-- iframeはYoutubeの好きな動画をはめ込んでいればOK！大きさはCSSで調整しておこう！
+こちらでwidthやheightを指定してもいいが、他にもCSSで指定する場合はCSSファイルでまとめておいたほうがいいですね-->
+<iframe src="https://www.youtube.com/embed/g5rspaIh2no" title="YouTube video player"
+  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>装飾総合|解答例</title>
+  <meta name="description" content="こちらはベーシック編第23章「装飾総合」の解答例です">
+  <link rel="stylesheet" href="answer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Roboto:wght@900&display=swap"
+    rel="stylesheet">
+  <!-- fontAwesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- 
+-*-*-*-*-*-*-*-*-
+      記述編
+-*-*-*-*-*-*-*-*-
+(1)ul要素と、ol要素の違いは？
+ulは箇条書きで、olは番号書き
+
+
+(2)リストの点を表示したくない場合は、どこの要素にどのようなスタイルを与える？
+ulにlist-style: none;を適応
+
+
+(3)ボックスにシャドーを付けたい場合のプロパティは？
+box-shadow
+
+
+(4)影を付ける場合のデザイン上の注意点は？
+付けすぎるのは注意。ただしフラットデザインなどで完全に影をつけるの場合もある。
+
+-->
+
+<!--   
+  -*-*-*-*-*-*-*-*-
+  コーディング編
+  -*-*-*-*-*-*-*-*-
+-->
+<section>
+  <div class="content">
+    <!-- 実際spanの部分は疑似要素で処理したいですが、今回は未学習のため割愛 -->
+    <h2><span>Feature01</span>利用者数急上昇中!!今年のトレンド</h2>
+    <div class="inner">
+      <img src="feature1.svg" alt="利用者が急増するわけ">
+      <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+    </div>
+  </div>
+  <!-- <i>要素を使うのは稀ですが、方法の１つとして覚えておきましょう -->
+  <a href="#">
+    <i class="fas fa-chevron-circle-right"></i>さっそく無料登録をする<img class="pointer-img" src="pointer.svg" alt="ポインター">
+  </a>
+</section>
+
+</body>
+</html>

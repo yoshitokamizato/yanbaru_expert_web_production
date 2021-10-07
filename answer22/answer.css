@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+}
+
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  background-color: #C8DEE4;
+  padding-top: 204px;
+}
+
+a, h4, h5{
+  line-height: 1.5;
+  letter-spacing: .1em;
+}
+
+.content{
+  width: 320px; /* box-sizing: border-box;を適応させていたら400px */
+  text-align: center; /* 全体が中央寄せなので親要素で一括管理 */
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+h5{
+  font-size: 12px;
+}
+
+h4{
+  font-size: 18px;
+}
+
+.food-name{
+  border-top: 1px solid #E4E4E4;
+  margin-top: 20px;
+  padding: 20px 0 25px 0;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  background-color: #38924C;
+  padding: 11px 82px; /* figma上では横のpaddingが84pxだが補正がかかっているので82pxで調整。84pxのままだと改行されるのでここはコーディングで調整 */
+  border-radius: 26px;
+}

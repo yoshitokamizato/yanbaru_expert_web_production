@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+}
+section{
+  max-width: 1440px;
+  height: 810px;
+  /* height: 56.25%;  
+    max-height: 810px;
+  発展的ですがこちらで書くと実践的です*/
+  background-image: url(fv-bgi2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  width: 480px; 
+  /* width: 33.33%; 発展的ですが、上記のsectionセレクター内のheightと一緒にこちらで書くと実践的です*/
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

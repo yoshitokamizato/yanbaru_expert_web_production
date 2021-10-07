@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>positionプロパティ|解答例</title>
+  <meta name="description" content="こちらはベーシック編第21章「positionプロパティ」の解答例です">
+  <link rel="stylesheet" href="answer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 
+-*-*-*-*-*-*-*-*-
+      記述編
+-*-*-*-*-*-*-*-*-
+
+(1)position: absolute;はどこを起点にしている？position: relative;との違いを踏まえながら簡潔に答えましょう
+ビューポートの左上
+position: relative;はその要素自身
+
+
+(2)右のCSSでの重なり順を答えましょう。またその理由を答えましょう。
+position: relative;が全てに適応されているとする
+上から、3>2>1
+
+
+
+(3)z-indexを適応させたのに、重なり順がうまく機能していない場合、もっとも起こり得ていることはなに？
+positionプロパティがデフォルトのまま
+
+
+
+(4)ヘッダーなどページ内の固定位置からスクロールしても動かないようにするためのプロパティと値はなに？
+position: fixed;
+
+
+(5) (4)でヘッダーを作る際にページ上部にピッタリとくっつけるにはどうする？
+top: 0;も付け加えておく
+
+
+
+(6)  positionプロパティの初期値は何？
+static
+-->
+
+<!--   
+  -*-*-*-*-*-*-*-*-
+  コーディング編
+  -*-*-*-*-*-*-*-*-
+-->
+<section>
+  <div class="container">
+    <h1>沖縄を旅する。<br>沖縄の未来を作る。</h1>
+    <img src="fv-deco.svg" alt="Be your fun">
+  </div>
+  <div class="cta-btn">
+    <a href="">旅する<span>沖縄旅行はコチラ</span></a>
+    <a href="">暮らす<span>移住希望はコチラ</span></a>
+  </div>
+</section>
+</body>
+</html>

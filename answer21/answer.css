@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+}
+
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+section{
+  max-width: 1440px;
+  padding-top: 532px;  /* paddingを使った背景中の文字の位置と高さ調整① */
+  padding-bottom: 260px;  /* paddingを使った背景中の文字の位置と高さ調整② */
+  background-image: url(fv-bgi.jpg);
+  background-repeat: no-repeat;
+  background-size: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1, a{
+  letter-spacing: .1em;
+}
+
+h1{
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.5;/* paddingを使った背景中の文字の位置と高さ調整③  実際の値は108px(36px*1.5*2行)*/
+  color: #333;
+  margin-left: 80px;
+}
+
+img{
+  position: absolute;
+  bottom: 131px;
+  left: 90px;
+  /* position指定は、ズレやすいので要チェック */
+}
+
+.cta-btn{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* font-size: 0;  インラインブロック要素・インライン要素の特有の隙間は今回そのまま使用*/
+}
+
+a{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #428166;
+  padding: 24px 80px;
+}
+
+span{
+  display: inline-block;
+  font-size: .5em;
+  margin-left: 16px;
+}
+/* ここは誤差の範囲が出るので割愛 */
+
+/* 
+===============================================
+    paddingで
+    ・背景の「高さ」
+    ・背景の要素の「位置」を制御する
+===============================================
+FVでの位置調整のテクニックの1つ(もちろん他にもあるので手段の1つとして覚えておこう)
+
+このとき
+背景の高さが
+① padding-top
+② 要素の高さ
+③ padding-bottom
+の合計値になっていることを活かしたテクニックです(ボックスモデルを見てみるといいですね)
+
+今回は
+背景の高さ 900px
+① padding-top 532px
+② 要素の高さ 108px
+③ padding-bottom 260px
+で作成
+
+ちなみにここでpositionプロパティの大事な考え方の１つが入ってきます
+それは、positionプロパティはデフォルトで浮いてしまうので、背景内の要素にはなっていないのです。浮いているからですね。
+
+そのため今回、positionプロパティを使用したa要素とimg要素は背景の要素に含まれていないのです。
+
+よって、②要素の高さからは除外されているのです。
+positionプロパティが入ったら浮いてしまうという考えは持っておきましょう！
+
+今回はそのため②要素の高さはh1要素のみなのです。
+
+これは
+positionプロパティの特性と、背景への対応方法の1つを覚えてほしい部分です。
+ちなみにこの背景の高さの使い方は、FVで最も使うテンプレパターンの１つです。
+
+*/

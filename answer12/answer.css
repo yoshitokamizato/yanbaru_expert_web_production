@@ -1,0 +1,22 @@
+h2{
+  font-size: 64px;
+  line-height: 1.5;
+  letter-spacing: .05em;
+}
+
+.sample1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+.sample2{
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 900;
+}
+.sample3{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+.sample4{
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}

@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+}
+
+body{
+  padding: 181px 160px;
+}
+
+a{
+  display: block;
+  font-size: 36px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1;
+  color: #333;
+  text-decoration: none;
+  width: fit-content;
+  margin-bottom: 124px;
+}
+
+p{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* ボタン1 */
+.btn1{
+  color: #fff;
+  background-color: #13538E;
+  padding: 36px;
+}
+
+/* ボタン2 */
+.btn2{
+  font-size: 24px;
+  color: #fff;
+  background-color: #4D9879;
+  padding: 34px;
+}
+
+.btn2 span{
+  display: block;
+  font-size: .5em;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  width: fit-content;
+  margin: 0 auto 10px auto;
+  /* 色々な方法がありますがtext-alignでもOKです */
+}
+
+/* ボタン3 */
+.test3{
+  width: fit-content;
+  text-align: center;
+  font-weight: 700;
+}
+
+.test3 p{
+  font-size: 18px;
+  letter-spacing: .1em;
+  line-height: 1.25;
+}
+
+.btn3{
+  font-size: 24px;
+  background-color: #F2F47F;
+  padding: 24px 34px;
+}
+
+/* ボタン4 */
+.btn4, .info4{
+  display: inline-block;
+  vertical-align: top;
+  /* ブロック要素の中にインライン要素・インラインブロック要素を入れるとhtmlの仕様で隙間ができます。
+  これを回避するためのいくつかの方法として、
+
+  ・上に寄せる場合は vertical-align: top;
+  ・下に寄せる場合は vertical-align: bottom;
+  を使えるといいですね。
+  
+  インライン要素の上下はvertical-alignで調整しておく考えも持ちましょう*/
+}
+
+.btn4{
+  font-size: 24px;
+  color: #fff;
+  background-color: #38676A;
+  padding: 28px 56px;
+  
+}
+
+.info4{
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: .05em;
+  margin: 24px 16px;
+}
+
+/* ボタン5 */
+.btn5{
+  color: #fff;
+  background-color: #8C2482;
+  padding: 36px;
+}
+
+.btn5 span{
+  color: #F4D840;
+}

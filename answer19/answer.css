@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+}
+
+section{
+  max-width: 1440px; /*  */
+  height: 100vh; /* fvが画面いっぱいまで広がるように指定 */
+  background-image: url(fv-bgi.jpg); /* 書き出し時は2xでエクスポートして解像度を上げておく */
+  background-size: 760px; 
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding: 108px 80px;
+  margin: 0 auto;
+  /* font-size: 0;    下記で解説しています*/
+}
+
+h1, p{
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: .1em;
+}
+
+h1{
+  font-size: 96px;
+  margin-bottom: 44px;
+}
+
+p{
+  display: inline-block;
+  font-size: 36px;
+  color: #fff;
+  background-color: #333;
+  padding: 16px 24px;
+}
+
+
+/* 
+========================================
+              ~ 解説 ~
+  インラインブロックにすると隙間ができる解決方法
+========================================
+
+結論！
+・親要素にfont-size: 0;を指定
+・インライン要素に指定した要素にそれぞれのフォントサイズを指定
+
+※
+いろんな方法がありますが、これでOK！試しに上記でコメントアウトしているfont-size: 0;を外してみると隙間が消えますよ
+消えた後はmarginで調整もOK
+
+今回はデザインとそこまで大きく変わらないので省略。
+
+
+*/

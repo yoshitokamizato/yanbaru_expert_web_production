@@ -1,0 +1,25 @@
+h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .05em;
+}
+
+.test1 span{
+  color: #D66E6E;
+}
+
+.test2{
+  color: #7D7D7D;
+}
+
+.test2 span{
+  color: rgb(215, 237, 81);
+}
+/* Sassで書きたいところですね */
+
+.test3{
+  color: #9BBCDB;
+  background-color: #333;
+}

@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+}
+
+body{
+  font-family: 'Playfair Display', serif;
+  /* 標準のフォントを指定しておく */
+}
+
+section{
+  min-height: 758px;
+  /* 最低限の高さは確保 */
+  padding-top: 126px;
+  padding-bottom: 16px;
+  /* box-sizingを使う場合はまた別の値 */
+  background-color: #E1DFCE;
+  background-image: url(fv-bgi.jpg);
+  background-size: 725px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+p{
+  font-size: 18px;
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: .05em;
+  height: 48px;
+  line-height:48px;
+  /* 上記2つで垂直方向の中央寄せ */
+  text-align: center;
+  background-image: url(accent-bgi.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* 色んな方法があるが今回はSVGで背景を使用した方法 */
+}
+
+h2{
+  width: fit-content;
+  font-size: 88px;
+  color: #333;
+  letter-spacing: .1em;
+  line-height: 1.5;
+  margin: 80px auto 0;
+  text-align: right;
+}
+
+span{
+  color: #E29D34;
+}
+
+a{
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: .1em;
+  line-height: 1;
+  background-color: #333;
+  padding: 24px 40px;
+  margin: auto;
+  margin-top: 294px;
+}

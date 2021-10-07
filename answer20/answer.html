@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>そろえるプロパティ|解答例</title>
+  <meta name="description" content="こちらはベーシック編第20章「そろえるプロパティ」の解答例です">
+  <link rel="stylesheet" href="answer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Playfair+Display:wght@400;900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+
+<!-- 
+-*-*-*-*-*-*-*-*-
+      記述編
+-*-*-*-*-*-*-*-*-
+
+(1) text-align要素が中央揃えにするのは何？
+テキスト
+
+(2)フォントサイズ48pxのフォントで、1行分のテキストを縦に中央揃えしたい場合のスタイルの適応方法は？
+heightとline-heightを同じにする
+
+(3)marginをつかった水平方向への中央揃えはどのように適応させる？
+※垂直方向は自由
+margin: XXX auto;
+補足_中央への揃え方は様々にありますので手段の１つとして覚えてください
+
+(4)floatプロパティはどのような場合に使用するのが望ましい？
+画像への回り込み
+
+
+(5)p要素を親要素の中央揃えにしたいのに、中途半端な場所に設置されているが、考えられる原因は？
+widthが中途半端に指定されている。指定されていてもmarginをつかった中央寄せをやっていない
+
+-->
+
+<!--   
+  -*-*-*-*-*-*-*-*-
+  コーディング編
+  -*-*-*-*-*-*-*-*-
+-->
+<!-- 実案件でLP作成するならsection要素にclass名に"fv"入れて管理しやすいようにします -->
+<section>
+  <p>Yanbaru Living</p>
+  <h2><span>W</span>hat is <span>H</span>appiness<br>
+  to you</h2>
+  <a href="#"><span>M</span>ore <span>I</span>nformation</a>
+</section>
+
+</body>
+</html>

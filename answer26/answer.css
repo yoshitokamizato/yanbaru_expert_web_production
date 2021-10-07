@@ -1,0 +1,154 @@
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* サイドバー */
+aside{
+  position: fixed;
+  left: 0;
+  width: 400px;
+  height: 100vh; /* ビューポートいっぱいまで広がるように作成 */
+  background-color: #333;
+}
+
+ul{
+  list-style: none;
+  padding-top: 68px;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+  color: #fff;
+
+}
+li a{
+  font-size: 18px;
+  padding: 28px 0 28px 56px;
+  line-height: 1;
+}
+
+a span{
+  font-size: 12px;
+}
+/*
+考え方
+
+今回ulにpadding-leftを入れるか、a要素にpadding(-left)を入れるか悩むかもしれませんが、今回は要素に入れたほうがいいでしょう。
+
+それはa要素つまりリンクの押しやすさに直結するからです。
+ここで前提として
+「リンクを押せる範囲」=「要素の範囲」=「borderより内側」です
+
+つまりpaddingで指定した範囲は要素の範囲なのです
+
+ということは余白を作るとき、a要素の範囲を広げたほうがいいでしょう
+
+そのため、ulでpadding指定するより、a要素にpadding指定するほうが範囲は広くなります。
+
+これはこのようなクリック操作などのUIに関係する部分では考える必要があることです
+
+実際にulでpadding指定と、a要素でpadding指定を分けて作成し
+下記のようなhoverアクションで見るとクリック範囲は違います。
+
+このようなデザインの見た目だけ見てるだけではわからないwebならではの動きも考慮しましょう！
+
+*/
+
+/* おまけ */
+a:hover{
+  color: #333;
+  background-color: #fff;
+  transition: .3s;
+}
+
+span{
+  display: block;  /* 上下に積み重なるようにブロック要素に変える */
+}
+
+section{
+  height: 480px; /*  ボックスモデルが初期設定のままなのでpaddingも高さに入れる  */
+  margin-left: 400px;
+  padding-top: 80px;
+}
+
+h2, h3{
+  color: #fff;
+  text-align: center;
+}
+
+h2{
+  font-size: 80px;
+  font-family: 'Train One', cursive; /* cursiveは筆記体という意味 */
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: .3;
+  /* 
+  =============================
+  rgbaとopacityの「透明」の違い
+  =============================
+
+  ・rgbaはその配色の透明度のみに適応
+  ・opacityは要素全体に透明を適応
+  どちらも値の入れ方は共通している
+  
+  */
+}
+
+h3{
+  font-size: 24px;
+  line-height: 1;
+}
+
+#feature h2, #feature h3{
+  color: #333;
+}
+
+section div{
+  width: 64px;
+  height: 2px;
+  background-color: #fff;
+  margin: 24px auto 0 auto;
+}
+
+#feature div{
+  background-color: #333;
+}
+
+#feature{
+  background-color: #C9D63D;
+}
+#content{
+  background-color: #4E68EE;
+}
+#voice{
+  background-color: #E74E7C;
+}
+#contact{
+  background-color: #6BA53D;
+}
+#faq{
+  background-color: #358293;
+}
+
+.top-btn{
+  font-size: 18px;
+  line-height: 1;
+  color: #333;
+  background-color: #fff;
+  padding: 41px 32px 41px 31px;
+  border-radius: 50%;
+  /* 下記はボタンの画面上での固定表示 */
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+}

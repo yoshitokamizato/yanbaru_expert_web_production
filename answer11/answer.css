@@ -1,0 +1,32 @@
+h1{
+  /* font-familyに注目 */
+  font-family :	YuMincho, 'Yu Mincho', serif;
+  font-size: 64px;
+  font-weight: 600;
+  /* ここから下は書いても書かなくてもOKです */
+  line-height: 1.5;
+  letter-spacing: .05em;
+}
+
+h2{
+  font-family :	YuGothic, 'Yu Gothic', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  /* ここから下は書いても書かなくてもOKです */
+  line-height: 1.5;
+  letter-spacing: .1em;
+}
+
+/* 
+これは動画内で解説していませんが、游明朝/游ゴシックは非常に間違えやすい例です。
+
+游明朝/游ゴシックは、MacOSとwindowsOSで値の表記方法が異なる特殊なシステムフォントの例です。
+
+游明朝/游ゴシックは非常に便利なため多用するため、まずは游明朝/游ゴシックを使う場合の書き方として覚えておきましょう
+今は游明朝/游ゴシックを使うときはこんなんなんだなくらいでOKです！あとから知識が追いついてきます！
+
+ちなみに
+YuMinchoはMacOS用  'Yu Mincho'はWindows用です。
+
+ */
+

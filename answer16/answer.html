@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブロック要素・インライン要素|解答例</title>
+  <meta name="description" content="こちらはベーシック編第16章「ブロック要素・インライン要素」の解答例です">
+  <link rel="stylesheet" href="answer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@700&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+
+<!-- 
+-*-*-*-*-*-*-*-*-
+      記述編
+-*-*-*-*-*-*-*-*-
+(1) ヘッダータグ、フッタータグのグループを作るタグは？
+ヘッダー <header></header>
+フッター <footer></footer>
+
+
+(2) div要素と、section要素の違いは？
+sectionは何かしらのテーマを持つ。divは汎用性があり特に意味やテーマを持たなくても使用。
+※sectionは今後出てくる課題で見てみると頭に入りやすいです。そこまで大きな違いはないので心配しなくてもいいです。
+
+
+(3)article要素は何を作るための要素？
+そのページで何か独立したテーマで使う
+
+
+(4)復習
+hrefは、hyper referenceでハイパーリンク
+relは、relationでそのファイルや要素との関係性を示す
+どちらもhtmlの要素で使う属性
+
+-->
+
+<!--   
+  -*-*-*-*-*-*-*-*-
+  コーディング編
+  -*-*-*-*-*-*-*-*-
+-->
+
+
+<!-- ボタン1 -->
+<a href="#" class="btn1">BUTTON</a>
+<!-- ボタン2 -->
+<a href="#" class="btn2"><span>＼期間限定／</span>申込みはコチラ</a>
+<!-- ボタン3 -->
+<div class="test3">
+  <p>＼期間限定／</p>
+  <a href="#" class="btn3">申込みはコチラ</a>
+</div>
+<!-- ボタン4 -->
+<div class="test4">
+  <a href="#" class="btn4">お申し込みはコチラ</a>
+  <p class="info4">※注意※<br>在庫がなくなり次第販売が終了となります</p>
+</div>
+<!-- ボタン5 -->
+<a href="#" class="btn5"><span>＼期間限定／</span>お申し込みはコチラ</a>
+</body>
+</html>

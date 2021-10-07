@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+}
+
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+section{
+  max-width: 1440px;
+  height: 780px;
+  background-image: url(feature-bgi.png);
+  background-repeat: no-repeat;
+  background-size: 1440px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+.content{
+  width: 1032px;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 6px 6px 4px 0 rgba(0, 0, 0, .1);
+  margin: 0 auto;
+}
+
+h2{
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  color: #fff;
+  line-height: 56px;
+  background-color: #0F6488;
+  text-align: center;
+  padding: 24px 0;
+  border-radius: 30px 30px 0 0;  /* 左上と右上のみ丸くしている */
+}
+
+span{
+  display: inline-block;
+  font-size: 48px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0;
+  margin-right: 80px; /* インラインブロック化してテキストとの間に余白をつくる */
+}
+
+.inner{
+  /* 本来ならフレックスボックスのが良いが未学習のため割愛 */
+  padding: 64px;
+}
+
+p{
+  display: inline-block; /* 画像と横並びにするため */
+  width: 512px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .075em; /* デザインカンプからテキストの調整 */
+  margin-left: 80px; 
+  vertical-align: top;
+}
+
+a{
+  /* ある種のパターン化されたボタンの構成です */
+  display: block;
+  width: 336px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: .075em; /* デザインカンプからテキストの調整 */
+  margin-left: 80px;
+  line-height: 1;
+  color: #fff;
+  position: relative;
+  text-align: center;
+  margin: 80px auto 0 auto;
+  padding: 30px 40px;
+  text-decoration: none;
+  background-color: #FFA41B;
+  border-radius: 16px;
+  box-shadow: 8px 8px #A96D12; /* フラット型の影では配色の透明度も、ぼかしもないため省略してコードが書ける */
+}
+
+i{
+  display: inline-block;
+  margin-right: 24px;
+  /* インラインブロック化してテキストとの間に余白をつくる */
+}
+
+.pointer-img{
+  position: absolute;
+  bottom: -18px;
+  right: 40px;
+}

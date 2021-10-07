@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>擬似クラス|解答例</title>
+  <meta name="description" content="こちらはベーシック編第24章「擬似クラス」の解答例です">
+  <link rel="stylesheet" href="answer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 
+-*-*-*-*-*-*-*-*-
+      記述編
+-*-*-*-*-*-*-*-*-
+(1)   次のスタイルはどのような条件の要素に適応されますか？
+
+① div：nth-child(5)
+兄弟要素を数えて、2番目のdiv要素すべてにCSSを適応させる
+
+
+② div：nth-child(odd)
+兄弟要素を数えて、奇数番目のdivすべてにCSSを適応させる
+
+
+③ div  p：nth-of-type(3)
+div要素内の pのみを上から数えて3番目のp要素すべてにCSSを適応させる
+
+
+
+(2)擬似クラスのhoverとactiveの違いは？
+hoverはマウスがその対象物にのったとき、activeはクリックなどの操作をしたとき
+
+
+
+(3)hoverさせた場合、移り変わりにかかる標準的な秒数はどれくらい？
+プロパティと値も含めて答えましょう。
+transition: .3s;
+これくらいが基準値です
+
+
+-->
+
+<!--   
+  -*-*-*-*-*-*-*-*-
+  コーディング編
+  -*-*-*-*-*-*-*-*-
+-->
+<a href="#" class="btn1">BUTTON</a>
+<a href="#" class="btn2">BUTTON</a>
+<a href="#" class="btn3">BUTTON</a>
+<a href="#" class="btn4">BUTTON<img src="pointer.svg" alt="ポインター"></a>
+
+</body>
+</html>

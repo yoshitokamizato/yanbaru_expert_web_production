@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+}
+
+div{
+  width: 560px;
+  background-color: #508E97;
+  padding: 40px;
+  margin: 134px 75px;
+}
+
+h2, h3, h4, p {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: .05em;
+  color: #fff;
+}
+
+h2, h3{
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  width: fit-content;
+}
+
+h2{
+  padding: 36px 207px;
+  background-color: #72B0D2;
+}
+
+h3{
+  padding: 118px 181px;
+  background-color: #2C80AF;
+  margin-top: 23px;
+}
+
+h4, p{
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+h4{
+  margin-top: 40px;
+  font-weight: 700;
+}
+
+p{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+}

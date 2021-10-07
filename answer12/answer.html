@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>webフォントの導入|解答例</title>
+  <meta name="description" content="こちらはベーシック編第12章「webフォントの導入」の解答例です">
+  <link rel="stylesheet" href="answer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- GoogleFontsでまとめて取得すると、上記2行も付与されますが簡単に言うと読み込みをしやすくしています -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Noto+Serif+JP:wght@900&family=Quicksand&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 
+-*-*-*-*-*-*-*-*-
+      記述編
+-*-*-*-*-*-*-*-*-
+(1) システムフォントとwebフォントの違いは？
+どこからフォントを呼び出しているかが違う。システムフォントは各デバイス内のOSから。webフォントは各フォントを提供しているサーバーから。
+
+
+(2)  webフォントをページに反映させる時 <link>タグはどこに書く？
+headタグ内
+
+
+(3)  ヒラギノはwebフォント？
+システムフォント(現時点ではMacOSのみのシステムフォント)
+
+
+(4)Extra問題
+游ゴシック(体)はOSでfont-familyの書き方が違います。
+何が違うか調べてみましょう。(回避策が豊富なため重要度は低いですが、余力がある方は調べてみるといいですね！)
+
+answer10/answer.cssに記載
+
+
+-*-*-*-*-*-*-*-*-
+コーディング編
+-*-*-*-*-*-*-*-*-
+<POINT>
+・今回はフォントに関する確認課題なので、余白や中央寄せは気にしなくて問題ありません。
+
+・フォントサイズ/種類/太さ/のみで問題ありません。
+
+・今回の場合はwebフォントに注意しましょう。
+-->
+
+<h2 class="sample1">Web Design Course</h2>
+<h2 class="sample2">やんばるエキスパート</h2>
+<h2 class="sample3">Okinawafestival</h2>
+<h2 class="sample4">Okinawafestival</h2>
+<!-- 5問目は自由に試してみてください！ -->
+</body>
+</html>
