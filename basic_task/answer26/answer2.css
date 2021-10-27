@@ -1,0 +1,141 @@
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* サイドバー */
+aside{
+  position: fixed;
+  left: 0;
+  width: 400px;
+  height: 100vh; /* ビューポートいっぱいまで広がるように作成 */
+  background-color: #333;
+}
+
+ul{
+  list-style: none;
+  padding-top: 68px;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+  color: #fff;
+
+}
+li a{
+  font-size: 18px;
+  padding: 28px 0 28px 56px;
+  line-height: 1;
+}
+
+a span{
+  display: block;  /* 上下に積み重なるようにブロック要素に変える */
+  font-size: 12px;
+}
+
+
+/* おまけ */
+a:hover{
+  color: #333;
+  background-color: #fff;
+  transition: .3s;
+}
+
+section{
+  height: 480px; /*  ボックスモデルが初期設定のままなのでpaddingも高さに入れる  */
+  margin-left: 400px;
+  padding-top: 80px;
+}
+
+h3{
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1;
+}
+
+#feature h3{
+  color: #333;
+}
+
+/* h3上の英語表記を再現 */
+h3::before{
+  content: "";
+  display: block;
+  font-size: 80px;
+  font-family: 'Train One', cursive; /* cursiveは筆記体という意味 */
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: .3;
+}
+
+#feature h3::before{
+  content: "Feature";
+  color: #333;
+}
+#content h3::before{
+  content: "Content";
+}
+#voice h3::before{
+  content: "Voice";
+}
+#contact h3::before{
+  content: "Contact";
+}
+#faq h3::before{
+  content: "Faq";
+}
+
+/* h3下の横棒を作成 */
+h3::after{
+  content: "";
+  display: block;
+  width: 64px;
+  height: 2px;
+  background-color: #fff;
+  margin: 24px auto 0 auto;
+}
+
+#feature h3::after{
+  content: "";
+  background-color: #333;
+}
+
+#feature{
+  background-color: #C9D63D;
+}
+#content{
+  background-color: #4E68EE;
+}
+#voice{
+  background-color: #E74E7C;
+}
+#contact{
+  background-color: #6BA53D;
+}
+#faq{
+  background-color: #358293;
+}
+
+.top-btn{
+  font-size: 18px;
+  line-height: 1;
+  color: #333;
+  background-color: #fff;
+  padding: 41px 32px 41px 31px;
+  border-radius: 50%;
+  /* 下記はボタンの画面上での固定表示 */
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+}

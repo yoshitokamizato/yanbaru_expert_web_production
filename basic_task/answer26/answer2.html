@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スタイル適用の
+    優先順位について|解答例</title>
+  <meta name="description" content="こちらはベーシック編第26章「スタイル適用の
+優先順位について」の解答例です">
+  <link rel="stylesheet" href="answer2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Train+One&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+<!-- 
+============================
+        別解答例
+  ~疑似要素をつかいこなせ！~
+============================
+
+
+こちらは一部「疑似要素」を使用した方法を混ぜた方針を取っています。
+
+今回注目してほしいのは
+・サイドバーのa要素内で使用したspan要素
+・メインコンテンツ内のh3で使用した::before
+です。
+
+実は両者の取った方法は入れ替えても再現可能です。
+
+つまりサイドバーのリンクのspan要素内は疑似要素で代替可能ですし
+h3内の疑似要素beforeはhtmlのspan要素にも代えられます。
+
+見通しや管理のしやすなどで選ぶといいですね！
+
+
+またh3の疑似要素afterで利用した図形を表現する方法はよく使用します。
+answer.htmlではdiv要素で作成しましたが、余計な要素を増やさないためにも、このような図形は疑似要素でできるか検討してみましょう
+
+
+この様に擬似要素をうまく使うことで
+見通しの良いコーディングもできますのでぜひチャレンジしてみてください！
+(次回以降の課題でもこの疑似要素を活かせる課題もあるのでぜひチャレンジしてみてください)
+
+-->
+
+  <!--   
+  -*-*-*-*-*-*-*-*-
+  コーディング編
+  -*-*-*-*-*-*-*-*-
+-->
+  <aside>
+    <ul>
+      <!-- 疑似要素を使わずにマークアップ。 -->
+      <li><a href="#feature"><span>Feature</span>サービスの特徴</a></li>
+      <li><a href="#content"><span>Content</span>コンテンツ</a></li>
+      <li><a href="#voice"><span>Voice</span>体験者の声</a></li>
+      <li><a href="#contact"><span>Contact</span>お問い合わせ</a></li>
+      <li><a href="#faq"><span>FAQ</span>よくある質問</a></li>
+    </ul>
+  </aside>
+  <!-- 今回セクションには、ページ内リンクを設置するためにidを入れている -->
+  <section id="feature">
+    <!-- 疑似要素を利用してマークアップ -->
+    <h3>サービスの特徴</h3>
+  </section>
+  <section id="content">
+    <h3>コンテンツ</h3>
+  </section>
+  <section id="voice">
+    <h3>体験者の声</h3>
+  </section>
+  <section id="contact">
+    <h3>お問い合わせ</h3>
+  </section>
+  <section id="faq">
+    <h3>よくある質問</h3>
+  </section>
+  <!-- #でページのトップに戻る -->
+  <a class="top-btn" href="#">TOP</a>
+</body>
+
+</html>
