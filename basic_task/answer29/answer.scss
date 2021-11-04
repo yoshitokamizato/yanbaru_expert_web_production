@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Oswald:wght@700&display=swap");
+$base-color: #393e46;
+$gra-color: linear-gradient(right, #4ab1ec, #dbf24f);
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  // 太さが統一されていたのでこの段階で指定
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: center;
+}
+
+@mixin section-wrapper($top: 0, $bottom: 0, $left: 168px) {
+  // 「Sassを使ったプロパティのネストの別の書き方もあるよ！」の例です。
+  // 下記のような書き方はしなくていいですが、見慣れるために書いておきました。
+  padding: {
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+  }
+}
+
+@mixin title($font-size: 16px) {
+  font-size: $font-size;
+  width: fit-content;
+  color: transparent;
+  background: $gra-color;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+main {
+  margin-left: 308px;
+}
+
+aside {
+  width: 308px;
+  height: 100vh;
+  background-color: $base-color;
+  position: fixed;
+  img {
+    width: 140px;
+    margin: 91px auto 68px 64px;
+  }
+  li a {
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    line-height: 1.5;
+    padding: 12px 64px 12px;
+    &::before {
+      // リンクの共通部分でできそうなためcontentプロパティに挿入
+      content: "＞";
+    }
+    &:hover {
+      color: $base-color;
+      background-color: #fff;
+      transition: 0.3s;
+    }
+  }
+}
+
+#fv {
+  @include section-wrapper($top: 311px, $bottom: 72px);
+  // 今回は画像用のディレクトリを作成しました。参考にしてみてください。
+  background-image: url("images/fv.jpg");
+  background-size: cover;
+  h1 {
+    @include title(144px);
+  }
+}
+
+#about {
+  @include section-wrapper($top: 160px, $bottom: 100px);
+  h2 {
+    @include title(64px);
+    margin-bottom: 88px;
+    &::after {
+      content: "やんばるマーレカフェとは";
+      display: block;
+      font-size: 18px;
+      color: $base-color;
+      margin-top: 8px;
+    }
+  }
+  p {
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 2;
+    color: $base-color;
+    // white-space: pre-line;
+    // br要素を使わずwhite-spaceプロパティを利用してもいいが、フォーマッタ対策でbr要素を
+    width: 592px;
+    // backgroundプロパティをSassのmixinでまとめてもOK。
+    // 今回は練習用にバラけさせておきました
+    background-image: url("images/gra-bg.png");
+    background-size: 80px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    // テキストなどの後ろにある画像は背景画像として処理してしまおう
+  }
+}

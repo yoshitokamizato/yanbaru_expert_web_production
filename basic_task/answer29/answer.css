@@ -1,9 +1,122 @@
-html{
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Oswald:wght@700&display=swap");
+html {
   scroll-behavior: smooth;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
+  line-height: 1;
 }
 
+body {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: center;
+}
+
+main {
+  margin-left: 308px;
+}
+
+aside {
+  width: 308px;
+  height: 100vh;
+  background-color: #393e46;
+  position: fixed;
+}
+
+aside img {
+  width: 140px;
+  margin: 91px auto 68px 64px;
+}
+
+aside li a {
+  text-decoration: none;
+  display: block;
+  font-size: 24px;
+  color: #fff;
+  line-height: 1.5;
+  padding: 12px 64px 12px;
+}
+
+aside li a::before {
+  content: "＞";
+}
+
+aside li a:hover {
+  color: #393e46;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#fv {
+  padding-top: 311px;
+  padding-bottom: 72px;
+  padding-left: 168px;
+  background-image: url("images/fv.jpg");
+  background-size: cover;
+}
+
+#fv h1 {
+  font-size: 144px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: transparent;
+  background: -webkit-gradient(linear, right top, left top, from(#4ab1ec), to(#dbf24f));
+  background: linear-gradient(right, #4ab1ec, #dbf24f);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+#about {
+  padding-top: 160px;
+  padding-bottom: 100px;
+  padding-left: 168px;
+}
+
+#about h2 {
+  font-size: 64px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: transparent;
+  background: -webkit-gradient(linear, right top, left top, from(#4ab1ec), to(#dbf24f));
+  background: linear-gradient(right, #4ab1ec, #dbf24f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 88px;
+}
+
+#about h2::after {
+  content: "やんばるマーレカフェとは";
+  display: block;
+  font-size: 18px;
+  color: #393e46;
+  margin-top: 8px;
+}
+
+#about p {
+  font-size: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 2;
+  color: #393e46;
+  width: 592px;
+  background-image: url("images/gra-bg.png");
+  background-size: 80px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=answer.css.map */
