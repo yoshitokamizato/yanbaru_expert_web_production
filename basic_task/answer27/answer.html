@@ -18,51 +18,62 @@
 -*-*-*-*-*-*-*-*-
       記述編
 -*-*-*-*-*-*-*-*-
+(1) Watch Sassの役割2つは何でしょうか？
+・CSSファイルの生成
+・自動監視によるCSSファイルの更新
 
+(2)SCSS記法で変数をつかうとき、使う記号は？
+$(ドルもしくはダラー)
+
+
+(3)直属の親要素を参照するSCSS記法の記号は何？
+&(アンドもしくはアンパサンド)
+
+
+(4)mixinとincludeの違いを自分で言語化してみましょう
+mixinはよく使うパーツのテンプレート化、includeはmixinの出力先
+
+
+(5)下記の引数の入れ方で間違えているのはどこ？
+変数に＄が入っていない
 
 -->
 
-<!--   
-  -*-*-*-*-*-*-*-*-
-  コーディング編
-  -*-*-*-*-*-*-*-*-
--->
-<aside>
-  <ul>
-    <li><a href="#feature"><span>Feature</span>サービスの特徴</a></li>
-    <li><a href="#content"><span>Content</span>コンテンツ</a></li>
-    <li><a href="#voice"><span>Voice</span>体験者の声</a></li>
-    <li><a href="#contact"><span>Contact</span>お問い合わせ</a></li>
-    <li><a href="#faq"><span>FAQ</span>よくある質問</a></li>
-  </ul>
-</aside>
-<!-- 今回セクションには、ページ内リンクを設置するためにidを入れている -->
-<section id="feature">
-  <h2>Feature</h2>
-  <h3>サービスの特徴</h3>
-  <div></div>
-</section>
-<section id="content">
-  <h2>Content</h2>
-  <h3>コンテンツ</h3>
-  <div></div>
-</section>
-<section id="voice">
-  <h2>Voice</h2>
-  <h3>体験者の声</h3>
-  <div></div>
-</section>
-<section id="contact">
-  <h2>Contact</h2>
-  <h3>お問い合わせ</h3>
-  <div></div>
-</section>
-<section id="faq">
-  <h2>FAQ</h2>
-  <h3>よくある質問</h3>
-  <div></div>
-</section>
-<!-- #でページのトップに戻る -->
-<a class="top-btn" href="#">TOP</a>
+  <!--   
+    -*-*-*-*-*-*-*-*-
+    コーディング編
+    -*-*-*-*-*-*-*-*-
+  -->
+  <aside>
+    <ul>
+      <!-- 疑似要素を使わずにマークアップ。 -->
+      <li><a href="#feature"><span>Feature</span>サービスの特徴</a></li>
+      <li><a href="#content"><span>Content</span>コンテンツ</a></li>
+      <li><a href="#voice"><span>Voice</span>体験者の声</a></li>
+      <li><a href="#contact"><span>Contact</span>お問い合わせ</a></li>
+      <li><a href="#faq"><span>FAQ</span>よくある質問</a></li>
+    </ul>
+  </aside>
+  <!-- 今回セクションには、ページ内リンクを設置するためにidを入れている -->
+  <main>
+    <section id="feature">
+      <!-- 疑似要素を利用してマークアップ -->
+      <h3>サービスの特徴</h3>
+    </section>
+    <section id="content">
+      <h3>コンテンツ</h3>
+    </section>
+    <section id="voice">
+      <h3>体験者の声</h3>
+    </section>
+    <section id="contact">
+      <h3>お問い合わせ</h3>
+    </section>
+    <section id="faq">
+      <h3>よくある質問</h3>
+    </section>
+    <!-- #でページのトップに戻る -->
+    <a class="top-btn" href="#">TOP</a>
+  </main>
 </body>
 </html>
