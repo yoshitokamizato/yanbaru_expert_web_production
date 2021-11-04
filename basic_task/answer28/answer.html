@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS関数|解答例</title>
-  <meta name="description" content="こちらはベーシック編第28章「CSS関数」の解答例です">
-  <link rel="stylesheet" href="answer.css">
-</head>
-<body>
-
-<!-- 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS関数|解答例</title>
+    <meta
+      name="description"
+      content="こちらはベーシック編第28章「CSS関数」の解答例です"
+    />
+    <link rel="stylesheet" href="answer.css" />
+  </head>
+  <body>
+    <!-- 
 -*-*-*-*-*-*-*-*-
       記述編
 -*-*-*-*-*-*-*-*-
+(1)rgba関数の「r」「g」「b」「a」はそれぞれ何を表している？
+red green blue alpha(透明度)の頭文字
 
+
+(2)linear-gradient関数で上方向にグラデーションを掛けたい場合のキーワードでの方向の指定方法は？
+top
+
+
+(3)liner-gradient関数で右方向にグラデーションを掛けたい場合の角度での方向の指定方法は？
+90deg
+
+
+(4)CSS関数の「calc関数」の「calc」の意味は？
+calculation(calculate)
+
+
+(5)画面幅100%から500px引いた残りを幅widthにしたp要素テキストボックスを作りたい場合、p要素のwidthの指定方法は？
+p{
+  width: calc(100% - 500px);
+}
 
 -->
 
@@ -24,5 +45,31 @@
   -*-*-*-*-*-*-*-*-
 -->
 
-</body>
+    <section id="about">
+      <h2>About</h2>
+      <figure>
+        <figcaption>3分で解説!! やんばるCreatorsの紹介</figcaption>
+        <!-- Youtubeの共有から貼り付け -->
+        <iframe
+          src="https://www.youtube.com/embed/-zQWavER7to"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </figure>
+    </section>
+    <section id="feature">
+      <h2>Feature</h2>
+      <h3>Feature01</h3>
+      <p>
+        グラデーションはちょっと外側から開始端と終了端をおくとキレイに見えやすいです。<br />
+        今回は練習用に縁ぴったりに端を置いています。
+      </p>
+    </section>
+    <footer>
+      <img src="logo.png" alt="やんばるクリエイターズのロゴ" />
+      <p>footer</p>
+    </footer>
+  </body>
 </html>
