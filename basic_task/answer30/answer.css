@@ -1,9 +1,1 @@
-html{
-  scroll-behavior: smooth;
-}
-
-*{
-  margin: 0;
-  padding: 0;
-}
-
+/* リセットCSSの設置ができればOK */
