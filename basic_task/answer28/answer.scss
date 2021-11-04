@@ -1,0 +1,122 @@
+// 今回はhtmlファイルにGoogleFontsの外部リンクを入れずに、CSSのファイルに設置する@importを使用
+// GoogleFontsならlinkとは別に選べるようになっているのでぜひチャレンジしてみてください。
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&family=Roboto:wght@700&display=swap");
+
+$main-color: linear-gradient(right, #f93d3d, #51d5f2);
+
+* {
+  margin: 0;
+  line-height: 1;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+@mixin section($padding-top: 0, $padding-bottom: 0, $bg-color: #fff) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  background: $bg-color;
+  text-align: center;
+}
+
+// Sassを使うほどでもない上この規模感だと返って管理しにくいが、練習用に書きたい方用に設置
+@mixin section-title($margin-bottom: 0) {
+  h2 {
+    font-size: 48px;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    margin-bottom: $margin-bottom;
+    // 疑似要素を用いたオブジェクトの作成。
+    // よく使うので見慣れてほしいです。
+    // 詳細の作成はスタンダード編でおこないます。
+    &::after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 8px;
+      margin: 0 auto;
+      border-radius: 4px;
+      background: $main-color;
+    }
+  }
+}
+
+// 今回採用している文字の配色が#333のためまとめて採用
+// また今回のように改行して見通しを良くする場合もあるので見慣れておきましょう。
+h2,
+h3,
+p,
+figcaption {
+  color: #333;
+}
+
+figcaption {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+}
+
+iframe {
+  width: 480px;
+  height: 240px;
+  border-radius: 10px;
+}
+
+#about {
+// 改行の見せ方もフォーマッタによって様々です。
+  @include section(
+    $padding-top: 160px,
+    $padding-bottom: 40px,
+    $bg-color: $main-color
+  );
+  @include section-title($margin-bottom: 48px);
+}
+
+#feature {
+  @include section(
+    $padding-top: 80px,
+    $padding-bottom: 255px,
+    $bg-color: #e7e7e7
+  );
+  @include section-title($margin-bottom: 120px);
+  h3 {
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 24px;
+    // 疑似要素を用いたオブジェクトの作成。
+    // よく使うので見慣れてほしいです。
+    // 詳細の作成はスタンダード編でおこないます。
+    &::after {
+      content: "";
+      width: 64px;
+      height: 64px;
+      background: $main-color;
+      opacity: 50%;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+  p {
+    line-height: 2;
+    font-weight: 500;
+  }
+}
+
+footer {
+  @include section($padding-bottom: 64px); 
+  img {
+    display: block;
+    width: 634px;
+    margin: 0 auto 64px;
+  }
+  p {
+    font-size: 24px;
+  }
+}

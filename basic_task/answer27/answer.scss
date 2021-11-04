@@ -1,0 +1,138 @@
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+// ========注意=================================================
+//
+// 1.
+// 今回はSassの最適な使い方というよりも
+// 今回の学習範囲で、使い方の雰囲気を掴むことを目的に解答例を作成しています。
+// 
+// 2.
+// 今回は練習用のため
+// 同じディレクトリ内にSassのファイルと、CSSのファイルが混在していますが
+// 本来なら別のディレクトリに分けて置いたほうが良いです。
+// 
+// ============================================================
+
+
+// sectionの管理
+@mixin section($bg-color: #fff) {
+  background-color: $bg-color;
+  text-align: center;
+  padding: 80px 0 310px;
+}
+
+// sectionごとのタイトル管理
+@mixin section-title( $sub-title: default,
+                      $main-color: #fff) {
+  // 複数行で変数が書かれている場合は改行して置いたほうがコードは見やすいです。
+  h3{
+    color: $main-color;
+    line-height: 1;
+    &::before{
+      content: $sub-title;
+      display: block;
+      font-size: 80px;
+      font-family: 'Train One', cursive;
+      line-height: 1.5;
+      opacity: .3;
+    }
+    &::after{
+      content: "";
+      display: block;
+      width: 64px;
+      height: 2px;
+      margin: 24px auto;
+      background-color: $main-color;
+    }
+  }
+}
+
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+main{
+  margin-left: 400px;
+}
+
+// サイドバー管理
+aside{
+  width: 400px;
+  height: 100vh;
+  padding-top: 28px;
+  background-color: #333;
+  position: fixed;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+}
+
+ul{
+  padding-top: 68px;
+}
+
+li{
+  a{
+    font-size: 18px;
+    color: #fff;
+    padding: 28px 64px;
+    span{
+      display: block;
+      font-size: 12px;
+    }
+    &:hover{
+      color: #333;
+      background-color: #fff;
+      transition: .3s;
+    }
+  }
+}
+
+// TOPに戻るボタンパーツ
+.top-btn{
+  // 今回はレスポンシブ化で学習する副産物で中央寄せしています
+  // レスポンシブ対応で学習しますので今回は前回までの内容でもOK
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #333;
+  position: fixed;
+  bottom: 80px;
+  right: 83px;
+}
+
+
+// 各sectionパーツ
+#feature{
+  @include section(#C9D63D);
+  @include section-title( $sub-title: "Feature",
+                          $main-color: #333);
+}
+#content{
+  @include section(#4E68EE);
+  @include section-title( $sub-title: "Content");
+}
+#voice{
+  @include section(#E74E7C);
+  @include section-title( $sub-title: "Voice");
+}
+#contact{
+  @include section(#6BA53D);
+  @include section-title( $sub-title: "Contact");
+}
+#faq{
+  @include section(#358293);
+  @include section-title( $sub-title: "FAQ");
+}
