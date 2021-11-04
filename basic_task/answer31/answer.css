@@ -1,135 +1,152 @@
-/* メインカラー #5993E4 */
-/* サブカラー #86F0FF */
-*{
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Open+Sans:wght@300&display=swap");
+* {
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-body{
-  font-family: 'Noto Sans JP', sans-serif;
+body {
+  font-family: "Noto Sans JP", sans-serif;
 }
 
-section{
-  background-image: url(bgi-img.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.container{
-  max-width: 1440px;
-  width: 80%;
-  padding: 160px 40px;
-  height: fit-content;
-  background-color: #fafafa;
-  margin: 0 auto;
-  box-shadow: 2px 0px 6px 4px #ddd;
-}
-
-h2, h3, h4, p{
-  font-weight: 100;
+h3,
+h4,
+p,
+a {
   color: #333;
-  letter-spacing: .1em;
-
+  font-weight: 300;
 }
 
-h2, h3{
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-}
-
-h2{
-  font-size: 80px;
-}
-
-img{
+img {
   max-width: 100%;
-  min-width: 0;
   height: auto;
   vertical-align: bottom;
-  align-self: flex-start;
-  flex: 0 0 400px;
 }
 
-.content-menus{
-  display: flex;
-  justify-content: center;
-  margin-top: 140px;
-}
-
-.info{
-  max-width: 460px;
-  padding: 4em 2em 0 2em;
-}
-
-h4{
-  font-size: 24px;
-  padding-right: 1em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #666;
-}
-
-p{
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: .05em;
-  padding-top: 4em;
-  white-space: pre-line;
-}
-
-a{
-  display: block;
+a {
   text-decoration: none;
-  color: #fff;
-  background-color: #333;
-  /* 優先順位で打消し線が出るよ */
-  width: fit-content;
-  width: auto;
-  font-size: 20px;
-  font-weight: 100;
-  letter-spacing: .1em;
-  padding: 1em 0;
+  display: block;
+}
+
+#feature {
+  padding: 5rem 0;
+}
+
+#feature h3 {
+  font-size: 16px;
   text-align: center;
-  margin-top: 1em;
 }
 
-a:hover{
+#feature h3::before {
+  content: "Feature";
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 4em;
+  font-weight: 300;
+}
+
+#feature .info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 2em;
+  max-width: 500px;
+}
+
+#feature img {
+  max-width: 500px;
+  width: 100%;
+  -webkit-box-shadow: 2px 2px 4px 2px rgba(51, 51, 51, 0.15);
+          box-shadow: 2px 2px 4px 2px rgba(51, 51, 51, 0.15);
+}
+
+#feature h4 {
+  font-size: 32px;
+  margin-bottom: 1em;
+}
+
+#feature p {
+  line-height: 2;
+}
+
+#feature a {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 60px;
   color: #333;
-  background-color: #fff;
-  transition: .3s;
+  font-size: 20px;
+  letter-spacing: 0.1em;
   border: 1px solid #333;
+  margin-top: 1em;
+  overflow-y: hidden;
+  position: relative;
 }
 
-@media (max-width:768px) {
-  .container{
-    width: auto;
-    padding: 80px 4%;
-  }
+#feature a::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  position: absolute;
+  top: -100%;
+  z-index: -1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 
-  .content-menus{
-    flex-direction: column;
-    margin-top: 40px;
-  }
-  .info{
-    max-width: none;
-    padding: 0;
-    padding-top: 32px;
-  }
-  h4{
-    font-size: 20px;
-    padding-right: 0;
-  }
-  p{
-    padding-top: 2em;
+#feature a:hover::after {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+#feature a:hover {
+  color: #fff;
+}
+
+#feature .content-menus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1000px;
+  margin: 5rem auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 964px) {
+  #feature .content-menus {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
-@media (max-width: 370px) {
-  .container{
-    padding: 40px 2%;
+@media (max-width: 520px) {
+  #feature .content-menus .info {
+    padding: 2em 1em;
   }
-  h2{
-    font-size: 48px;
+  #feature .content-menus h4 {
+    font-size: 24px;
+    margin-bottom: 2em;
   }
-  h3{
+  #feature .content-menus p {
     font-size: 14px;
   }
+  #feature .content-menus a {
+    font-size: 20px;
+  }
 }
+
+@media (max-width: 350px) {
+  #feature .content-menus h4 {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=answer.css.map */

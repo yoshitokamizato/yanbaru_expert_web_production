@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Open+Sans:wght@300&display=swap");
+
+// Sassを使えばもっとキレイに整理してかけますが、まずは最低限このように変数でブレイクポイントを書けるようにはしておこう
+$lg: 964px;
+$xs: 520px;
+$xxs: 350px;
+
+@mixin mq-up($breakpoint: $lg) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+h3,
+h4,
+p,
+a {
+  color: #333;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+#feature {
+  padding: 5rem 0;
+  h3 {
+    font-size: 16px;
+    text-align: center;
+    &::before {
+      content: "Feature";
+      display: block;
+      font-family: "Open Sans", sans-serif;
+      font-size: 4em;
+      font-weight: 300;
+    }
+  }
+  .info {
+    flex: 1 1 auto;
+    padding: 2em;
+    max-width: 500px;
+  }
+  img {
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 2px 2px 4px 2px rgba($color: #333, $alpha: 0.15);
+  }
+  h4 {
+    font-size: 32px;
+    margin-bottom: 1em;
+  }
+  p {
+    line-height: 2;
+  }
+  a {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 60px;
+    color: #333;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    border: 1px solid #333;
+    margin-top: 1em;
+    overflow-y: hidden;
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      position: absolute;
+      top: -100%;
+      z-index: -1;
+      transition: 0.3s;
+    }
+    &:hover::after {
+      transform: translateY(100%);
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  // 練習用にブレイクポイントを多めに設置しています。
+  // ブレイクポイントについてはレスポンシブ対応で学習します。
+  .content-menus {
+    display: flex;
+    max-width: 1000px;
+    margin: 5rem auto;
+    align-items: flex-start;
+    @include mq-up($lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include mq-up($xs) {
+      .info {
+        padding: 2em 1em;
+      }
+      h4 {
+        font-size: 24px;
+        margin-bottom: 2em;
+      }
+      p {
+        font-size: 14px;
+      }
+      a {
+        font-size: 20px;
+      }
+    }
+    @include mq-up($xxs) {
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+}
