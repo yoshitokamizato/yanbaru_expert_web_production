@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Noto+Sans+JP:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+// map-get関数というSassの関数を使用します。
+$breakpoint-value: (
+  md: "screen and (max-width: 768px)",
+  xs: "screen and (max-width: 415px)",
+);
+
+// ここは3つのSassの技術を使用しています。
+// これらは実務でもよく使いますが、難しいなら一旦飛ばしても構いません。後日解説動画を出します。
+// ① @mixinでの共通パーツ化
+@mixin mq($breakpoint: md) {
+  // map-get()関数というSassの技術
+  @media #{map-get($breakpoint-value, $breakpoint)} {
+    // @contentによる挿入箇所の指定
+    @content;
+  }
+}
+
+// **************************************************
+// フォントの基本設定
+// このようにパーツごとにmixinを使用するとパーツ管理が簡単になります。
+// 今回はフォントを例に作成してみました。
+@mixin font(
+  $size: 18px,
+  $weight: 700,
+  $color: #333,
+  $space: 0.1em,
+  $line-height: 1,
+  $text-align: center
+) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  letter-spacing: $space;
+  line-height: $line-height;
+  text-align: $text-align;
+}
+
+h1 {
+  @include font($size: 96px, $color: #fff, $space: 0);
+  font-family: "Inter", sans-serif;
+  @include mq() {
+    font-size: 72px;
+  }
+}
+
+h2 {
+  @include font($size: 36px, $color: #333);
+  @include mq() {
+    font-size: 24px;
+  }
+}
+
+h6 {
+  @include font($size: 18px, $color: #fff);
+}
+
+p {
+  @include font($line-height: 2);
+}
+
+a {
+  @include font($size: 24px, $color: #fff);
+  text-decoration: none;
+}
+
+// **************************************************
+// 中央寄せ
+@mixin center-part($width, $height, $top, $bottom) {
+  display: grid;
+  place-items: center;
+  max-width: $width;
+  height: $height;
+  margin: $top auto $bottom;
+}
+
+#fv {
+  max-width: 1440px;
+  height: 940px;
+  padding: 385px 0 160px;
+  margin: 0 auto;
+  /* 今回FVの背景をJPGにしたが、もしも背景が単純でない場合はPNGで透過しておきましょう */
+  background-image: url(fv.jpg);
+  //サイズは固定値
+  background-size: 1440px;
+  //必ず中央になるように保険
+  background-position: center;
+  h6 {
+    margin-top: 80px;
+    span {
+      font-size: 1.5em;
+    }
+  }
+  a {
+    @include center-part(
+      $width: 342px,
+      $height: 84px,
+      $top: 8px,
+      $bottom: auto
+    );
+    background: linear-gradient(right, #31a4e5, #80e4de);
+    border-radius: 20px;
+  }
+}
+
+#about {
+  h2 {
+    position: relative;
+    span {
+      // 常に元のフォントサイズから8px大きいのでcalc()関数で処理
+      font-size: calc(1em + 8px);
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #8dd0f2;
+      position: absolute;
+      bottom: -104px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  p {
+    //中央寄せにグリッドレイアウトを使用しています。
+    //レスポンシブ化後半で学習します。
+    //幅と高さを指定すれば、たった2行で中央寄せ可能です。
+    @include center-part($width: 551px, $height: 532px, $top: 24px, $bottom: 0);
+    white-space: pre-line;
+    // 本来はSVG画像が用意されていたらSVGが良いでしょう。
+    background-image: url(okinawa-shape.png);
+    background-size: 100%;
+    background-position: center;
+    // 縮んだときに繰り返しが起きないようにしている
+    background-repeat: no-repeat;
+  }
+}
