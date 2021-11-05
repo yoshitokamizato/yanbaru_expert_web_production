@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>|解答例</title>
-  <meta name="description" content="こちらはベーシック編第章「」の解答例です">
-  <link rel="stylesheet" href="answer.css">
-</head>
-<body>
-
-<!-- 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name=”viewport” content=” width=devise-width, initial-scale= 1, minimum-scale= 1, maximum-scale= 1, user-scalable= no ”>
+    <title>34.レスポンシブ対応 メディアクエリ|解答例</title>
+    <meta
+      name="description"
+      content="こちらはベーシック編第34章「レスポンシブ対応 メディアクエリ」の解答例です"
+    />
+    <link rel="stylesheet" href="answer.css" />
+  </head>
+  <body>
+    <!-- 
 -*-*-*-*-*-*-*-*-
       記述編
 -*-*-*-*-*-*-*-*-
+(1) メディアクエリを設定する場合、HTML内でまず設定することは？
+<meta name=”viewport” content=” width=devise-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no ”>
+駆け出しのときはコピペでOK
 
+
+(2) @media  screen  and  (min-width: 768px){ コンテンツ  }の意味は？
+最小768px以上でコンテンツを切り替えますという意味。
+
+
+(3) ブレイクポイントって何？
+メディアクエリの切り替えのビューポートの幅の基点
 
 -->
 
-<!--   
+    <!--   
   -*-*-*-*-*-*-*-*-
   コーディング編
   -*-*-*-*-*-*-*-*-
--->
 
-</body>
+  注意ですが今回の課題は、768pxまでできていればOKです。
+  またコチラの解答はSassを使って管理したらのデモンストレーションで作成しています。
+  必須ではありません。
+
+  CSSでの解答はCSSのファイルを見れば、コンパイルされています。
+
+-->
+    <section id="fv">
+      <h1>Be Fun<br />In Naga</h1>
+      <h6><span>4</span>泊<span>5</span>日の特別価格</h6>
+      <a href="#">＞名護旅行に申し込む</a>
+    </section>
+    <section id="about">
+      <h2><span>沖縄</span>を楽しむ。<span>名護</span>で楽しむ。</h2>
+      <p>沖縄県北部に位置する名護には
+        沖縄有数のエメラルドグリーンの海が広がります。
+
+        海を楽しむことは、名護を楽しむことです。</p>
+    </section>
+  </body>
 </html>
