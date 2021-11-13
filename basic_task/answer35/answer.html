@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>|解答例</title>
-  <meta name="description" content="こちらはベーシック編第章「」の解答例です">
+  <!-- <meta name=”viewport” content=” width=devise-width, initial-scale= 1, minimum-scale= 1, maximum-scale= 1, user-scalable= no ”> -->
+  <title>レスポンシブ対応 フレックスボックス①|解答例</title>
+  <meta name="description" content="こちらはベーシック編第35章「レスポンシブ対応~ フレックスボックス①」の解答例です">
   <link rel="stylesheet" href="answer.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
 
@@ -14,6 +15,38 @@
 -*-*-*-*-*-*-*-*-
       記述編
 -*-*-*-*-*-*-*-*-
+(1) display: flex;は親要素に適用する？もしくは子要素に適用する？
+親要素
+
+
+(2) flex-directionプロパティは親要素・子要素どちらに適応させる？
+親要素
+
+
+(3) flex-directionプロパティを用いて上から順に垂直方向に並べたいとき、値は何にする？
+columns
+
+
+(4) フレックスボックスの主な特徴2つは何？
+横並びが得意・並び替えが得意・要素の伸縮が得意などかければOK
+
+
+(5) justify-contentプロパティは親要素・子要素どちらに適用させる？
+親要素
+
+
+(6) 垂直方向にフレックスアイテムをすべて揃えたい場合のプロパティは何？
+align-items
+(ちなみに各子要素につけたいならalign-self)
+
+
+
+(7) flex-wrapプロパティはどんなプロパティ？
+フレックスアイテムの折返し
+
+
+(8) flex-wrapプロパティは親要素・子要素どちらに適用させる？
+親要素
 
 
 -->
@@ -22,7 +55,49 @@
   -*-*-*-*-*-*-*-*-
   コーディング編
   -*-*-*-*-*-*-*-*-
+
+注意！
+
+今回は1セクションですが、複数セクションがあることを想定して作成しています。
+
 -->
+
+
+
+
+<!-- 今回はセクションが1つなので分ける必要はないが癖でつけておこう -->
+<section id="flow">
+  <h2>無料体験までの流れ</h2>
+  <!-- ulでフレックスコンテナを代替。慣れないうちはdivが無難です。 -->
+  <ul>
+    <li>
+      <!-- h４要素を繰り返しで処理してしもいいが今回は割愛。
+        申し込みの流れはサービスとして頻繁に変更されることはないのでそこまで柔軟性を持たせなくても良い。 -->
+      <h4>01</h4>
+      <p>まずは無料体験フォームから<br>希望授業を申し込む</p>
+      <img src="images/flow1.svg" alt="">
+    </li>
+    <!-- 無料体験までの流れ01 -->
+    <li>
+      <h4>02</h4>
+      <p>登録したメールアドレスに<br>確認メールが届きます</p>
+      <img src="images/flow2.svg" alt="">
+    </li>
+    <!-- 無料体験までの流れ02 -->
+    <li>
+      <h4>03</h4>
+      <p>授業当日、送られてきたURLに<br>5分前には入場</p>
+      <img src="images/flow3.svg" alt="">
+    </li>
+    <!-- 無料体験までの流れ03 -->
+  </ul>
+  <div class="cta-container">
+    <!-- 下記は特殊文字のエスケープをしています。教材化はしますがいたって単純な処理です。 -->
+    <h3>7&#047;1<span>Mon</span>&#032;〜&#032;8&#047;24<span>Sun</span></h3>
+    <a href="#">無料体験レッスンはコチラ</a>
+  </div>
+</section>
+
 
 </body>
 </html>

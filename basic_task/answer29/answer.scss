@@ -84,8 +84,9 @@ aside {
   // 今回は画像用のディレクトリを作成しました。参考にしてみてください。
   background-image: url("images/fv.jpg");
   background-size: cover;
-  h1 {
+  h1 span{
     @include title(144px);
+    display: block;
   }
 }
 

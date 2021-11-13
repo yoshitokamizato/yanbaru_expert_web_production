@@ -69,7 +69,7 @@ aside li a:hover {
   background-size: cover;
 }
 
-#fv h1 {
+#fv h1 span {
   font-size: 144px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -79,6 +79,7 @@ aside li a:hover {
   background: linear-gradient(right, #4ab1ec, #dbf24f);
   -webkit-background-clip: text;
   background-clip: text;
+  display: block;
 }
 
 #about {
