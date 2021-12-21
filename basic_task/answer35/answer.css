@@ -29,6 +29,12 @@ h2 {
   margin-bottom: 40px;
 }
 
+@media screen and (max-width: 860px) {
+  h2 {
+    font-size: 14px;
+  }
+}
+
 h2::before {
   content: "";
   display: block;
@@ -48,6 +54,13 @@ h2::after {
   margin: 40px auto 0;
 }
 
+@media screen and (max-width: 860px) {
+  h2::after {
+    width: 29px;
+    height: 29px;
+  }
+}
+
 h3 {
   font-size: 24px;
   font-weight: 500;
@@ -56,6 +69,12 @@ h3 {
   line-height: 1;
   text-align: center;
   font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 860px) {
+  h3 {
+    font-size: 20px;
+  }
 }
 
 h4 {
@@ -85,6 +104,12 @@ p {
   background-repeat: no-repeat;
   background-position: bottom right;
   padding: 88px 0 44px;
+}
+
+@media screen and (max-width: 860px) {
+  .cta-container {
+    background-image: none;
+  }
 }
 
 .cta-container h3 span {
@@ -124,6 +149,19 @@ p {
           box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (max-width: 860px) {
+  .cta-container a {
+    font-size: 22px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cta-container a {
+    font-size: 20px;
+  }
+}
+
 .cta-container a::after {
   content: "\f138";
   font-family: "Font Awesome 5 Free";
@@ -141,6 +179,14 @@ p {
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 860px) {
+  #flow {
+    padding-left: 4%;
+    padding-right: 4%;
+    background-image: none;
+  }
+}
+
 #flow h2::before {
   content: "Flow";
 }
@@ -152,6 +198,15 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 860px) {
+  #flow ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #flow li {
@@ -170,6 +225,16 @@ p {
   -webkit-box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
   border-radius: 30px;
+}
+
+@media screen and (max-width: 860px) {
+  #flow li {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  #flow li:nth-of-type(n+2) {
+    margin-top: 40px;
+  }
 }
 
 #flow li h4 {

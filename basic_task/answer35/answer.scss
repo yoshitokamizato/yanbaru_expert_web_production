@@ -18,6 +18,20 @@ img {
   vertical-align: bottom;
 }
 
+
+// 応用(将来的には慣れてほしい)
+$breakpoint-down: (
+  's-size': 'screen and (max-width: 375px)',
+  'm-size': 'screen and (max-width: 860px)'
+) !default;
+
+// map-getと@contentでメディアクエリを使いやすい形にしています
+@mixin mq-down($breakpoint: m-size) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
 // フォント部分の共通部分作成
 @mixin font(
   $size: 16px,
@@ -41,6 +55,9 @@ h2 {
   @include font($size: 24px, $color: #333);
   // 他の要素と違う部分を下記に作成
   margin-bottom: 40px;
+  @include mq-down(){
+    font-size: 14px;
+  }
   &::before {
     content: "";
     display: block;
@@ -57,6 +74,10 @@ h2 {
     border-radius: 50%;
     background-color: #007bb4;
     margin: 40px auto 0;
+    @include mq-down(){
+      width: 29px;
+      height: 29px;
+    }
   }
 }
 
@@ -64,6 +85,9 @@ h2 {
 h3 {
   @include font($size: 24px, $space: 0, $weight: 500);
   font-family: "Roboto", sans-serif;
+  @include mq-down(){
+    font-size: 20px;
+  }
 }
 
 // h4要素の共通部分作成
@@ -112,6 +136,9 @@ p {
   background-size: 281px;
   background-repeat: no-repeat;
   background-position: bottom right;
+  @include mq-down(){
+    background-image: none;
+  }
   h3 {
     span {
       // 6pxだけ常に小さいのでcalc関数で計算
@@ -143,6 +170,13 @@ p {
     margin: 32px auto 0;
     border-radius: 10px;
     box-shadow: 4px 4px 4px 0 rgba($color: #000000, $alpha: 0.15);
+    @include mq-down(){
+      font-size: 22px;
+      height: 90px;
+    }
+    @include mq-down(s-size){
+      font-size: 20px;
+    }
     &::after {
       content: "\f138";
       // FontAwesomeをよく使うならbodyなどに格納もあり
@@ -169,6 +203,13 @@ p {
   background-position: top right, bottom left;
   // 2つの画像に対して同じ値を適応させたい場合は、1つでOK
   background-repeat: no-repeat;
+  @include mq-down(){
+    //セクションの余白を固定ではなく可変性のある%で指定。
+    //375pxの4%は15px
+    padding-left: 4%;
+    padding-right: 4%;
+    background-image: none;
+  }
   h2::before {
     content: "Flow";
   }
@@ -177,6 +218,9 @@ p {
     display: flex;
     // フレックスアイテムの水平揃え(正確にはメイン軸)。
     justify-content: center;
+    @include mq-down(){
+      flex-direction: column;
+    }
   }
   // 複雑な階層構造を設置したくないのでulでネストしない方針
   li {
@@ -185,6 +229,15 @@ p {
     background-color: #fff;
     box-shadow: 4px 4px 4px 0 rgba($color: #000000, $alpha: 0.15);
     border-radius: 30px;
+    @include mq-down(){
+      max-width: 400px;
+      margin: 0 auto;
+      &:nth-of-type(n+2){
+        //nth-of-typeを用いてmargin-bottomの当たる要素の範囲を指定
+        //ちなみにnをマイナスにしたnth-of-type(-n+2){margin-bottom}もできるので実践してみましょう。
+        margin-top: 40px;
+      }
+    }
     h4 {
       margin-bottom: 40px;
       &::before {
